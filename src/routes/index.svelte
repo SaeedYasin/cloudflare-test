@@ -45,8 +45,8 @@
 </section>
 
 <style lang="scss">
-  @use './src/scss/base' as *;
-  
+  @use 'src/scss/base' as *;
+
 .logo {
     @include flex_row_center(flex-start);
 }
