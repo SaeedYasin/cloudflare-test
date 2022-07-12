@@ -1,0 +1,21 @@
+@use 'colorMaps' as *;
+@use 'sass:color';
+
+$shadow-sm-light-color1: color.scale(map-get($greyMap, 850), $alpha: -90%);
+$shadow-sm-light-color2: color.scale(map-get($greyMap, 850), $alpha: -94%);
+$shadow-sm-dark-color1: color.scale(white, $alpha: -90%);
+$shadow-sm-dark-color2: color.scale(white, $alpha: -94%);
+$shadow-xs-light-color: color.scale(map-get($greyMap, 900), $alpha: -95%);
+$shadow-xs-dark-color: color.scale(white, $alpha: -90%);
+
+@mixin shadows {
+  --shadow-sm-light: 0px 1px 3px #{$shadow-sm-light-color1}, 0px 1px 2px #{$shadow-sm-light-color2};
+  --shadow-sm-dark: 0px 1px 3px #{$shadow-sm-dark-color1}, 0px 1px 2px #{$shadow-sm-dark-color2};
+  --shadow-xs-light: 0px 1px 2px #{$shadow-xs-light-color};
+  --shadow-xs-dark: 0px 1px 2px #{$shadow-xs-dark-color};
+
+  --shadow-focus-primary-light: 0 0 0 3px var(--purple300);
+  --shadow-focus-primary-dark: 0 0 0 3px var(--purple400);
+  --shadow-focus-error-light: 0 0 0 3px var(--red300);
+  --shadow-focus-error-dark: 0 0 0 3px var(--red400);
+}

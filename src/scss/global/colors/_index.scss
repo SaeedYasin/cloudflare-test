@@ -1,0 +1,57 @@
+@use 'colorMaps' as *;
+@forward 'mixins';
+@forward 'pseudos';
+@forward 'shadows';
+
+@mixin color_palette {
+  @include greyColorPallet;
+  @include purpleColorPallet;
+  @include redColorPallet;
+  @include yellowColorPallet;
+  @include greenColorPallet;
+}
+
+@mixin color_intentions {
+  --bg-light: var(--grey25);
+  --bg-dark: var(--grey1000);
+  --bg-color: var(--bg-light);
+
+  --text-light: var(--grey700);
+  --text-dark: var(--grey200);
+  --text-color: var(--text-light);
+
+  --header-light: white;
+  --header-dark: var(--grey850);
+  --header-color: var(--header-light);
+
+  --navbar-text-light: var(--grey500);
+  --navbar-text-dark: var(--grey50);
+  --navbar-text-color: var(--navbar-text-light);
+}
+
+@mixin body_colors {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+@mixin body_dark_mode_colors {
+  --bg-color: var(--bg-dark);
+  --text-color: var(--text-dark);
+  --header-color: var(--header-dark);
+  --navbar-text-color: var(--navbar-text-dark);
+}
+
+a {
+  color: var(--purple500);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  a {
+    color: var(--purple400);
+  }
+}

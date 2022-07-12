@@ -1,0 +1,16 @@
+@use 'colorMaps' as *;
+
+::selection {
+  color: white;
+  background: var(--purple500);
+}
+
+:visited {
+  color: var(--purple700);
+}
+
+@media (prefers-color-scheme: dark) {
+  :visited {
+    color: var(--purple600);
+  }
+}

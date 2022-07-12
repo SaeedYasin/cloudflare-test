@@ -1,0 +1,48 @@
+@use 'variables' as *;
+
+@mixin flex_center($justify: center, $align: center) {
+  display: flex;
+  flex-direction: column;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin flex_inline_center($justify: center) {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: $justify;
+}
+
+@mixin flex_row_center($justify: center) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: $justify;
+}
+
+@mixin flex_row_inline_center($justify: center) {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: $justify;
+}
+
+@mixin page_container {
+  margin-left: $container-margin;
+  margin-right: $container-margin;
+  max-width: $container-max-width;
+  width: min($container-max-width, $page-content-width);
+}
+
+@mixin flex_container($justify: center, $align: center) {
+  @include flex_center($justify);
+  align-self: $align;
+  @include page_container;
+}
+
+@mixin flex_row_container($justify: center, $align: center) {
+  @include flex_row_center($justify);
+  align-self: $align;
+  @include page_container;
+}

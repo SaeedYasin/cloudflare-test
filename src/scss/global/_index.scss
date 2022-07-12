@@ -1,0 +1,34 @@
+@use 'colors' as *;
+@use 'typography' as *;
+
+:root {
+  @include color_palette;
+  @include color_intentions;
+  @include fonts_root;
+  @include shadows;
+}
+
+body {
+  @include font_base;
+  @include text_lg;
+  @include body_colors;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    @include body_dark_mode_colors;
+  }
+}
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  border: 0 !important;
+  clip-path: inset(50%) !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+}

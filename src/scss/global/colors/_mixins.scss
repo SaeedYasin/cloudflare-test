@@ -1,0 +1,21 @@
+@use 'shadows' as *;
+
+@mixin focus_border_shadow_light {
+  border-color: var(--purple500);
+  box-shadow: var(--shadow-focus-primary-light);
+}
+
+@mixin focus_border_shadow_dark {
+  border-color: var(--purple600);
+  box-shadow: var(--shadow-focus-primary-dark);
+}
+
+@mixin invalid_border_shadow_light {
+  border-color: var(--red500);
+  box-shadow: var(--shadow-focus-error-light);
+}
+
+@mixin invalid_border_shadow_dark {
+  border-color: var(--red600);
+  box-shadow: var(--shadow-focus-error-dark);
+}
