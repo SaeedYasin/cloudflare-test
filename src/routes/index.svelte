@@ -1,9 +1,10 @@
-<script context="module" lang="ts">
+/*<script context="module" lang="ts">
 	export const prerender = true;
-</script>
+</script>*/
 
 <script lang="ts">
 	import Counter from '$lib/Counter.svelte';
+	import Image from '$lib/images/kitty.jpg?w=400&h=300&webp';
 </script>
 
 <svelte:head>
@@ -11,6 +12,14 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
+<img
+    class="lazy"
+    loading="eager"
+    decoding="async"
+    width="672"
+    height="448"
+    src={Image}
+  />
 <section>
 	<h1>
 		<span class="welcome">
