@@ -7,7 +7,8 @@ const config = {
 	plugins: [sveltekit(), imagetools()],
 	resolve: {
     alias: {
-      $lib: path.resolve('./src/lib')
+      $lib: path.resolve('./src/lib'),
+      $assets: path.resolve('./src/assets')
     }
   }
 };

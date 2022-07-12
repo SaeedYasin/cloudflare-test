@@ -3,7 +3,7 @@
 </script>*/
 
 <script lang="ts">
-	import Counter from '$lib/Counter.svelte';
+	import Counter from '$assets/Counter.svelte';
 	import Image from '$lib/images/kitty.jpg?w=400&h=300&webp';
 </script>
 
