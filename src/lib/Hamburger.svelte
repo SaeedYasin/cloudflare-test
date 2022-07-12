@@ -2,7 +2,7 @@
   export let open = false;
 </script>
 
-<!-- 
+
 <span>
   <label id="navbar-hamburger-label" for="navbar-hamburger-input" class="sr-only">
     Toggle Menu
@@ -83,4 +83,4 @@
       display: none;
     }
   }
-</style> -->
+</style>

@@ -13,7 +13,9 @@
   <meta name="description" content="Svelte demo app" />
 </svelte:head>
 
+  <span class="logo">
 <Hamburger open={true} />
+</span>
 <img
   class="lazy"
   alt="tset"
@@ -43,6 +45,11 @@
 </section>
 
 <style lang="scss">
+  @use './src/scss/base' as *;
+  
+.logo {
+    @include flex_row_center(flex-start);
+}
   section {
     display: flex;
     flex-direction: column;
